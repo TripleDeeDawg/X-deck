@@ -1,0 +1,285 @@
+/* X/Twitter Modern Theme Overrides */
+@font-face {
+    font-family: 'Chirp' !important;
+    src: url('https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.3a18e64a.woff2') format('woff2') !important;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chirp' !important;
+    src: url('https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.f8e2739a.woff2') format('woff2') !important;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chirp' !important;
+    src: url('https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.ebb56aba.woff2') format('woff2') !important;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Force override all fonts */
+*:not(button):not(input):not(textarea):not(select) {
+    font-family: 'Chirp', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+/* Root Variables with !important */
+:root {
+    --background-primary: rgb(0, 0, 0) !important;
+    --background-secondary: rgb(0, 0, 0) !important;
+    --text-primary: rgb(231, 233, 234) !important;
+    --text-secondary: rgb(113, 118, 123) !important;
+    --border-color: rgb(47, 51, 54) !important;
+    --accent-blue: rgb(29, 155, 240) !important;
+    --hover-bg: rgba(0, 4, 7, 0.1) !important;
+}
+
+/* Strong selectors for base styles */
+html, body, .application {
+    background-color: var(--background-primary) !important;
+    color: var(--text-primary) !important;
+    font-size: 15px !important;
+    line-height: 1.3125 !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+/* Column overrides */
+.column, .column-header, .column-title-wrapper {
+    background-color: var(--background-primary) !important;
+    border-color: var(--border-color) !important;
+}
+
+.column-header {
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.column-title {
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+}
+
+/* Tweet overrides */
+.stream-item, .tweet-detail {
+    background-color: var(--background-primary) !important;
+    border-color: var(--border-color) !important;
+    transition: background-color 0.2s !important;
+}
+
+.stream-item:hover, .tweet-detail:hover {
+    background-color: var(--hover-bg) !important;
+}
+
+.tweet-text, .tweet-text * {
+    color: var(--text-primary) !important;
+    font-size: 15px !important;
+    line-height: 1.3125 !important;
+}
+
+/* Button overrides */
+.btn-primary, .Button--primary {
+    background-color: var(--accent-blue) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 700 !important;
+    transition: background-color 0.2s !important;
+}
+
+.btn-primary:hover, .Button--primary:hover {
+    background-color: rgb(26, 140, 216) !important;
+}
+
+/* Navigation overrides */
+.app-navigator {
+    background-color: var(--background-primary) !important;
+    border-right: 1px solid var(--border-color) !important;
+    gap: 0 !important;
+    padding-bottom: 8px !important;
+}
+
+.app-nav-link {
+    color: var(--text-primary) !important;
+    font-weight: 500 !important;
+    transition: color 0.2s !important;
+}
+
+.app-nav-link:hover {
+    color: var(--accent-blue) !important;
+}
+
+/* Scrollbar overrides */
+::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-secondary) !important;
+    border-radius: 4px !important;
+}
+
+/* Input overrides */
+input, textarea {
+    background-color: var(--background-primary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--accent-blue) !important;
+    outline: none !important;
+}
+
+/* Modal overrides */
+.modal-content {
+    background-color: var(--background-primary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Link overrides */
+a {
+    color: var(--accent-blue) !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+/* Full menu nuclear override */
+.app-navigator, 
+.column-nav, 
+.column-nav *, 
+.column-nav-item, 
+.column-nav .nav-item, 
+.column-nav .nav-item button,
+.column-header, 
+.column-background-fill,
+[class*="nav"],
+[class*="menu"] {
+    background-color: var(--background-primary) !important;
+    background-image: none !important;
+}
+
+/* Handle all color variations */
+[style*="#1C2938"],
+[style*="#1c2938"],
+[style*="rgb(28, 41, 56)"] {
+    background-color: var(--background-primary) !important;
+}
+
+/* Nuclear option for navigation hierarchy */
+.app-navigator,
+.app-navigator > div,
+.app-navigator > div > div,
+.column-nav-wrapper,
+.column-nav-container,
+.column-nav-scroller,
+.column-nav-item,
+.column-nav-item button,
+.column-nav .nav-item,
+.column-nav .nav-link,
+.column-header-inner,
+.column-title,
+.column-menu,
+.column-menu-items,
+.column-type-indicator {
+    background-color: var(--background-primary) !important;
+    background-image: none !important;
+}
+
+/* Target pseudo-elements and states */
+.column-nav-item:before,
+.column-nav-item:after,
+.column-nav-item:hover,
+.column-nav-item:focus-within {
+    background-color: var(--background-primary) !important;
+}
+
+/* Catch-all for color variants */
+[style*="#1C2938"], 
+[style*="#1c2938"],
+[style*="rgb(28,41,56)"],
+[style*="rgb(28, 41, 56)"],
+[class*="dark"] .column-nav {
+    background-color: var(--background-primary) !important;
+}
+
+/* Target main menu container */
+.app-header-inner,
+.app-header-inner *,
+.column-nav-item,
+.app-nav-link {
+    background-color: var(--background-primary) !important;
+}
+
+/* Handle pseudo-elements and nested components */
+.column-nav:after,
+.column-nav:before,
+.app-header-inner :is(button, div, form, ul, li) {
+    background-color: var(--background-primary) !important;
+}
+
+/* Override inline styles on nav items */
+[class*="column-nav-item"] {
+    background-color: var(--background-primary) !important;
+}
+
+/* Remove post button */
+.tweet-button, 
+[data-test-id="tweet-call-to-action"], 
+.js-show-drawer[data-drawer="compose"] {
+    display: none !important;
+    pointer-events: none !important;
+}
+
+.spinner-large::after,
+.spinner-small::after,
+.spinner-small-trans::after {
+    content: "𝕏"; /* Unicode X symbol */
+    color: var(--text-primary);
+    font-size: 3em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+}
+
+/* Fix search button position */
+.js-search {
+    margin-top: 30px !important;
+}
+
+/* Remove accounts button and space */
+.js-show-drawer[data-drawer="accountSettings"],
+.app-nav-tab[data-title="Accounts"] {
+    display: none !important;
+}
+
+/* Remove bottom menu logo */
+.tweetdeck-logo,
+.js-logo img {
+    display: none !important;
+    background-image: none !important;
+}
+
+/* Remove beta ribbon */
+.beta-ribbon {
+    display: none !important;
+}
+
+html.dark .tweetdeck-logo {
+    background: url(/images/logo128.png) !important;
+    background-size: contain !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}

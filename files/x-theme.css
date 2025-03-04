@@ -1,0 +1,198 @@
+/* X/Twitter Modern Theme */
+@font-face {
+    font-family: 'Chirp';
+    src: url('https://abs.twimg.com/responsive-web/client-web/Chirp-Regular.3a18e64a.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chirp';
+    src: url('https://abs.twimg.com/responsive-web/client-web/Chirp-Medium.f8e2739a.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chirp';
+    src: url('https://abs.twimg.com/responsive-web/client-web/Chirp-Bold.ebb56aba.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Root Variables */
+:root {
+    --background-primary: rgb(0, 0, 0);      /* Main background */
+    --background-secondary: rgb(0, 0, 0);    /* Secondary elements */
+    --text-primary: rgb(231, 233, 234);      /* Keep text white */
+    --text-secondary: rgb(113, 118, 123);
+    --border-color: rgb(47, 51, 54);
+    --accent-blue: rgb(29, 155, 240);
+    --hover-bg: rgba(0, 0, 0, 0.1); /* Blue tint for X consistency */
+}
+
+/* Base Styles */
+html, body {
+    background-color: var(--background-primary) !important;
+    color: var(--text-primary);
+    font-family: 'Chirp', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.3125;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Column Styles */
+.column {
+    background-color: var(--background-primary);
+    border-color: var(--border-color);
+}
+
+.column-header {
+    background-color: var(--background-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.column-title {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+/* Tweet Styles */
+.stream-item {
+    border-color: var(--border-color);
+    transition: background-color 0.2s;
+}
+
+.stream-item:hover {
+    background-color: var(--hover-bg);
+}
+
+.tweet-text {
+    color: var(--text-primary);
+    font-size: 15px;
+    line-height: 1.3125;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--accent-blue);
+    border: none;
+    color: white;
+    font-weight: 700;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: rgb(26, 140, 216);
+}
+
+/* Navigation */
+.app-navigator {
+    background-color: var(--background-primary);
+    border-right: 1px solid var(--border-color);
+}
+
+.app-nav-link {
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.app-nav-link:hover {
+    color: var(--accent-blue);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+    border-radius: 4px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.column {
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Input Fields */
+input, textarea {
+    background-color: var(--background-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+input:focus, textarea:focus {
+    border-color: var(--accent-blue);
+    outline: none;
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: var(--background-primary);
+    border: 1px solid var(--border-color);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Links */
+a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* For menus and dropdowns */
+.dropdown-menu, .menu, .compose-content-container {
+    background-color: var(--background-primary) !important;
+}
+
+/* Between menu and columns */
+.app-content {
+    border-top: 1px solid var(--border-color) !important;
+}
+
+/* Between columns */
+.column {
+    border-right: 1px solid var(--border-color) !important;
+}
+
+/* Remove extra padding around columns */
+.column-container {
+    padding: 0 !important;
+    gap: 0 !important;
+}
+
+/* Specific element targeting instead of universal selector */
+.app-navigator, 
+.dropdown-menu, 
+.menu, 
+.compose-content-container,
+.column-header {
+    background-color: var(--background-primary) !important;
+}
+
+/* Thicker borders (3px) between elements */
+.app-navigator {
+    border-right: 3px solid var(--border-color) !important;
+}
+
+.column {
+    border-right: 3px solid var(--border-color) !important;
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html class="scroll-v" lang="en-US">
+
+<head id="injected-head">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=yes" name="viewport">
+    <title>XDeck</title>
+    <meta content="XDeck" name="application-name">
+    <meta content="XDeck is your personal screener for staying in touch with what's happening now."
+        name="description">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <link href="/images/logo128.png" rel="shortcut icon">
+    <link href="/images/logo16.png" rel="apple-touch-icon" sizes="16x16">
+    <link href="/images/logo32.png" rel="apple-touch-icon" sizes="32x32">
+    <link href="/images/logo64.png" rel="apple-touch-icon" sizes="64x64">
+    <link href="/images/logo128.png" rel="apple-touch-icon" sizes="128x128">
+    <style>
+        body[style="background-color: #FFFFFF;"] {display: none;}
+        .x-loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 90px;
+            font-weight: bold;
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body class="scroll-v" id="injected-body">
+    <div class="js-app-loading login-container">
+        <div class="x-loading">𝕏</div>
+    </div>
+    <div class="is-hidden js-message-banner message-banner"></div>
+    <div class="is-hidden application js-app"></div>
+    <div class="js-modals-container">
+    </div>
+</body>
+</html>
